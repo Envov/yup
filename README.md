@@ -1,6 +1,6 @@
 # Yup
 
-Yup是运行时的schema构建器，用来对值解析和校验。 定义一个schema之后，你可以将值转换为匹配，或者断言现有的值的形状，或者两者兼而有之。Yup schema 具有极强的表现力，允许对复杂的schema、相互依赖的验证、值的转换进行建模。
+Yup是运行时的schema构建器，用来对值解析和校验。 定义一个schema之后，你可以把值匹配上schema，或者校验值的形状，或者两者兼而有之。Yup schema 具有极强的表现力，允许对复杂的schema、相互依赖的验证、值的转换进行建模。
 
 > **当前文档版本是 yup-v1.0.0-pre-release, pre-v1版本的文档: [在这](https://github.com/jquense/yup/tree/pre-v1)**
 
