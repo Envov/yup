@@ -68,7 +68,7 @@ const parsedUser = await userSchema.validate(
 
 ## 目录
 
-- [Schema basics](#schema-basics)
+- [Schema](#schema)
   - [Parsing: Transforms](#parsing-transforms)
   - [Validation: Tests](#validation-tests)
   - [Composition and Reuse](#composition-and-reuse)
@@ -170,9 +170,11 @@ const parsedUser = await userSchema.validate(
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Schema basics
+## Schema 
+
 
 Schema definitions, are comprised of parsing "transforms" which manipulate inputs into the desired shape and type, "tests", which make assertions over parsed data. Schema also store a bunch of "metadata", details about the schema itself, which can be used to improve error messages, build tools that dynamically consume schema, or serialize schema into another format.
+
 
 In order to be maximally flexible yup allows running both parsing and assertions separately to match specific needs
 
