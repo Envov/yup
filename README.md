@@ -15,7 +15,7 @@ Yup是运行时的schema构建器，用来对值解析和校验。 定义一个s
 ## 快速开始
 
 Schema 包括解析操作 (转换) 以及关于输入值的断言 (测试)。
-用链式的方法建立一个Schema，用来验证一个即将被解析的值。
+下面代码是用链式的方法建立一个Schema，并且校验 fetchUser 函数的结果是否有效。
 
 ```ts
 import { object, string, number, date, InferType } from 'yup';
