@@ -53,7 +53,7 @@ const parsedUser = userSchema.cast({
 });
 // ✅  { name: 'jimmy', age: 24, createdOn: Date }
 ```
-其实你的值已经被解析了，你可以严格的(`strict: true `)校验一个input，并且避免运行时的解析开销
+其实你的值已经被解析了，你可以严格的(`strict: true `)校验一个input，这不是在运行时，所以没有解析开销
 
 ```ts
 // ❌  验证错误 "age is not a number"
