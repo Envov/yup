@@ -28,7 +28,7 @@ let userSchema = object({
   createdOn: date().default(() => new Date()),
 });
 
-// parse and assert validity
+// 校验是否有效 
 const user = await userSchema.validate(await fetchUser());
 
 type User = InferType<typeof userSchema>;
@@ -41,11 +41,10 @@ type User = InferType<typeof userSchema>;
 }*/
 ```
 
-Use a schema to coerce or "cast" an input value into the correct type, and optionally
-transform that value into more concrete and specific values, without making further assertions.
+使用 Schema 将输入值显式或隐式推断为正确的类型，并可选地将该值转换为更具体和更健壮的值，并且无需做出进一步的断言。
 
 ```ts
-// Attempts to coarce values to the correct type
+// 尝试将值调整为正确的类型
 const parsedUser = userSchema.cast({
   name: 'jimmy',
   age: '24',
@@ -53,12 +52,10 @@ const parsedUser = userSchema.cast({
 });
 // ✅  { name: 'jimmy', age: 24, createdOn: Date }
 ```
-
-Know that your input value is already parsed? You can "strictly" validate an input, and avoid the overhead
-of running parsing logic.
+其实你的值已经被解析了，你可以严格的校验一个input，并且避免运行时的解析开销
 
 ```ts
-// ❌  ValidationError "age is not a number"
+// ❌  验证错误 "age is not a number"
 const parsedUser = await userSchema.validate(
   {
     name: 'jimmy',
