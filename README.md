@@ -172,11 +172,9 @@ const parsedUser = await userSchema.validate(
 
 ## Schema 
 
+Schema的定义是这样的：首先解析转换，把输入值 (inputs) 转换为预期的形状或类型或 “测试”，本质上是断言解析的数据。Schema还存储了一堆 “元数据”，它们是有关Schema的详细信息，这些信息可用于改进错误消息，构建其他动态使用Schema的工具或将Schema序列化为你想要的任何另一种格式。
 
-Schema definitions, are comprised of parsing "transforms" which manipulate inputs into the desired shape and type, "tests", which make assertions over parsed data. Schema also store a bunch of "metadata", details about the schema itself, which can be used to improve error messages, build tools that dynamically consume schema, or serialize schema into another format.
-
-
-In order to be maximally flexible yup allows running both parsing and assertions separately to match specific needs
+为了最大限度地灵活使用yup，匹配特殊需求，yup允许你分别 解析(parsing) 和 assertions(断言)
 
 ### Parsing: Transforms
 
