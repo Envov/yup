@@ -1,21 +1,21 @@
 # Yup
 
-Yup is a schema builder for runtime value parsing and validation. Define a schema, transform a value to match, assert the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
+Yup是运行时的schema构建器，用来对值解析和校验。 定义一个schema之后，你可以将值转换为匹配，或者断言现有的值的形状，或者两者兼而有之。Yup schema 具有极强的表现力，允许对复杂的schema、相互依赖的验证、值的转换进行建模。
 
-> **You are viewing docs for the v1.0.0 pre-release of yup, pre-v1 docs are available: [here](https://github.com/jquense/yup/tree/pre-v1)**
+> **当前文档版本是 yup-v1.0.0-pre-release, pre-v1版本的文档: [在这](https://github.com/jquense/yup/tree/pre-v1)**
 
-**Killer Features**:
+**杀手级特征**:
 
-- Concise yet expressive schema interface, equipped to model simple to complex data models
-- Powerful TypeScript support. Infer static types from schema, or ensure schema correctly implement a type
-- Built-in async validation support. Model server-side and client-side validation equally well
-- Extensible: add your own type-safe methods and schema
-- Rich error details, make debugging a breeze
+- 简洁而富有表现力的模式接口，能够对简单到复杂的数据模型进行建模
+- 全方面支持TypeScript，从模型推断静态类型，确保schema正确反映类型
+- 内置异步验证支持。服务器端和客户端验证模型同样好用
+- 可扩展: 添加您自己的 type-safe 方法 和schema
+- 丰富的错误细节，让调试变得轻而易举
 
-## Getting Started
+## 快速开始
 
-Schema are comprised of parsing actions (transforms) as well as assertions (tests) about the input value.
-Validate an input value to parse it and run the configured set of assertions. Chain together methods to build a schema.
+Schema 包括解析操作 (转换) 以及关于输入值的断言 (测试)。
+用链式的方法建立一个Schema，用来验证一个即将被解析的值。
 
 ```ts
 import { object, string, number, date, InferType } from 'yup';
